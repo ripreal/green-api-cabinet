@@ -1,0 +1,36 @@
+{
+  "name": "BalanceOutcome",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "services",
+      "otherEntityRelationshipName": "balanceOutcome",
+      "relationshipName": "service"
+    }
+  ],
+  "entityTableName": "balance_outcome",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "billing"
+  ]
+}

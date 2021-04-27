@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "serverPort": "8081",
+    "serviceDiscoveryType": "eureka",
+    "skipUserManagement": true,
+    "baseName": "billing",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [],
+    "messageBroker": false,
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "applicationType": "microservice",
+    "packageName": "com.greenapi",
+    "packageFolder": "com/greenapi",
+    "jhipsterVersion": "7.0.1",
+    "clientPackageManager": "npm",
+    "dtoSuffix": "DTO",
+    "entitySuffix": "",
+    "reactive": false
+  }
+}

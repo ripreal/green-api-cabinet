@@ -1,0 +1,53 @@
+
+application {
+  config {
+    baseName cabinetGateway,
+    applicationType gateway,
+    packageName com.greenapi,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+
+}
+
+application {
+  config {
+    baseName billing,
+    applicationType microservice,
+    packageName com.greenapi,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+  }
+  entities BalanceIncome, BalanceOutcome
+}
+
+entity BalanceIncome(balance_income) {
+	id UUID
+    userId Integer 
+    amount Integer
+}
+
+entity BalanceOutcome(balance_outcome) {
+	id UUID
+    userId Integer
+	amount Integer
+}
+
+entity Services(services) {
+	id UUID
+    name String
+	priceDailyRub Integer
+	priceDailyUSD Integer
+    priceChargeRub Integer
+    priceChargeUSD Integer
+}
+
+relationship ManyToOne {
+  BalanceIncome{service} to Services{balanceIncome}
+}
+
+relationship ManyToOne {
+  BalanceOutcome{service} to Services{balanceOutcome}
+}
+    
